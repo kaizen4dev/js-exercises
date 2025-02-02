@@ -15,8 +15,7 @@ const palindromes = function (string) {
   
   let array = string.toLowerCase().replace(/\W/g, "").split("");
 
-  let newArray = [];
-  array.map((item) => newArray.unshift(item));
+  let newArray = array.slice().reverse();
 
   for(key in array){
     if(array[key] != newArray[key]) return false;
